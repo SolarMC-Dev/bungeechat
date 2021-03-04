@@ -13,7 +13,7 @@ import net.md_5.bungee.api.chat.TranslatableComponent;
 import java.lang.reflect.Type;
 import java.util.Arrays;
 
-public class TranslatableComponentSerializer extends BaseComponentSerializer implements JsonSerializer<TranslatableComponent>, JsonDeserializer<TranslatableComponent>
+class TranslatableComponentSerializer extends BaseComponentSerializer implements JsonSerializer<TranslatableComponent>, JsonDeserializer<TranslatableComponent>
 {
 
     @Override

@@ -11,7 +11,7 @@ import net.md_5.bungee.api.chat.HoverEvent;
 import java.util.Arrays;
 import java.util.HashSet;
 
-public class BaseComponentSerializer
+class BaseComponentSerializer
 {
 
     protected void deserialize(JsonObject object, BaseComponent component, JsonDeserializationContext context)

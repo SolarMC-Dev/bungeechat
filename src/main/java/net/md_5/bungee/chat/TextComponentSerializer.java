@@ -13,7 +13,7 @@ import net.md_5.bungee.api.chat.TextComponent;
 import java.lang.reflect.Type;
 import java.util.List;
 
-public class TextComponentSerializer extends BaseComponentSerializer implements JsonSerializer<TextComponent>, JsonDeserializer<TextComponent>
+class TextComponentSerializer extends BaseComponentSerializer implements JsonSerializer<TextComponent>, JsonDeserializer<TextComponent>
 {
 
     @Override
