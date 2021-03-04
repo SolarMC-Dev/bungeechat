@@ -1,6 +1,5 @@
 package net.md_5.bungee.chat;
 
-import com.google.common.base.Preconditions;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonSerializationContext;
@@ -79,17 +78,18 @@ public class BaseComponentSerializer
     protected void serialize(JsonObject object, BaseComponent component, JsonSerializationContext context)
     {
         boolean first = false;
-        if ( ComponentSerializer.serializedComponents.get() == null )
+        HashSet<BaseComponent> serializedComponents = ComponentSerializer.serializedComponents.get();
+        if ( serializedComponents == null )
         {
             first = true;
-            ComponentSerializer.serializedComponents.set( new HashSet<BaseComponent>() );
+            serializedComponents = new HashSet<>();
+            ComponentSerializer.serializedComponents.set( serializedComponents );
         }
         try
         {
-            if (ComponentSerializer.serializedComponents.get().contains( component )) {
+            if (!serializedComponents.add( component )) {
                 throw new IllegalArgumentException("Component loop");
             }
-            ComponentSerializer.serializedComponents.get().add( component );
             if ( component.getColorRaw() != null )
             {
                 object.addProperty( "color", component.getColorRaw().getName() );
@@ -141,7 +141,7 @@ public class BaseComponentSerializer
             }
         } finally
         {
-            ComponentSerializer.serializedComponents.get().remove( component );
+            serializedComponents.remove( component );
             if ( first )
             {
                 ComponentSerializer.serializedComponents.set( null );
