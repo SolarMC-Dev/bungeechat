@@ -86,7 +86,9 @@ public class BaseComponentSerializer
         }
         try
         {
-            Preconditions.checkArgument( !ComponentSerializer.serializedComponents.get().contains( component ), "Component loop" );
+            if (ComponentSerializer.serializedComponents.get().contains( component )) {
+                throw new IllegalArgumentException("Component loop");
+            }
             ComponentSerializer.serializedComponents.get().add( component );
             if ( component.getColorRaw() != null )
             {
