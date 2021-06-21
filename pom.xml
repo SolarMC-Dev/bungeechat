@@ -6,11 +6,11 @@
     <parent>
         <groupId>gg.solarmc</groupId>
         <artifactId>solar-parent</artifactId>
-        <version>0.2.0</version>
+        <version>0.6.1</version>
     </parent>
 
     <artifactId>bungeecord-chat</artifactId>
-    <version>0.2.0</version> <!-- We use real versioning -->
+    <version>0.2.1-SNAPSHOT</version>
 
     <name>BungeeCord-Chat</name>
     <description>Legacy Minecraft JSON chat API</description>
@@ -20,6 +20,10 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
+
+    <scm>
+        <developerConnection>scm:git:https://github.com/SolarMC-Dev/bungeechat.git</developerConnection>
+    </scm>
 
     <dependencies>
         <dependency>
@@ -38,7 +42,7 @@
     <repositories>
         <repository>
             <id>solar-releases</id>
-            <url>https://mvn-repo.platinum-mc.com/releases</url>
+            <url>https://mvn-repo.solarmc.gg/releases</url>
         </repository>
     </repositories>
 </project>
