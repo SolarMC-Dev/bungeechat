@@ -5,7 +5,7 @@
     <parent>
         <groupId>gg.solarmc</groupId>
         <artifactId>solar-parent</artifactId>
-        <version>0.6.1</version>
+        <version>1.0.0</version>
     </parent>
 
     <artifactId>bungeecord-chat</artifactId>
@@ -25,6 +25,19 @@
       <tag>HEAD</tag>
   </scm>
 
+    <licenses>
+        <license>
+            <name>Modified BSD 3-Clause License</name>
+            <url>https://raw.githubusercontent.com/SpigotMC/BungeeCord/c5a90475afba676c96d33fc3c7a3c06490b5d13b/LICENSE</url>
+            <distribution>repo</distribution>
+        </license>
+        <license>
+            <name>GNU Lesser General Public License, Version 3</name>
+            <url>https://www.gnu.org/licenses/lgpl-3.0-standalone.html</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -41,8 +54,8 @@
 
     <repositories>
         <repository>
-            <id>solar-releases</id>
-            <url>https://mvn-repo.solarmc.gg/releases</url>
+            <id>solar-repo</id>
+            <url>https://repo.solarmc.gg/mvn</url>
         </repository>
     </repositories>
 </project>
