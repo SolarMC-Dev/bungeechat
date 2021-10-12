@@ -30,6 +30,8 @@ POSSIBILITY OF SUCH DAMAGE.
 
 -------------------------------------------------------------------------
 
+Copyright (c) 2021 SolarMC Developers
+
                    GNU LESSER GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 
